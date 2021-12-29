@@ -9,6 +9,7 @@ export default function ItemsScreen() {
   const styles = StyleSheet.create({
     itemListContainer: {
       paddingBottom: 40,
+      paddingTop: 20,
     },
   })
 
