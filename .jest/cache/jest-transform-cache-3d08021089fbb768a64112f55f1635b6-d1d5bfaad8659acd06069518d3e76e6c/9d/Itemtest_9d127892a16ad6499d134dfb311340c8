@@ -1,0 +1,63 @@
+daf4dfebf00d0e3731d99f09e2647f8b
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _utils = require("../../utils");
+
+var _Item = require("../../../components/Item");
+
+var _jsxRuntime = require("react/jsx-runtime");
+
+describe('components -> <Item />', function () {
+  it('render the food name if one is provided', function () {
+    var _render = (0, _utils.render)((0, _jsxRuntime.jsx)(_Item.Item, {
+      name: "testing"
+    })),
+        getByText = _render.getByText;
+
+    var testName = getByText('testing');
+    expect(testName).toBeTruthy();
+  });
+  it('render the food price if one is provided', function () {
+    var _render2 = (0, _utils.render)((0, _jsxRuntime.jsx)(_Item.Item, {
+      price: 12345
+    })),
+        getByText = _render2.getByText;
+
+    var testPrice = getByText('12345');
+    expect(testPrice).toBeTruthy();
+  });
+  it('on first render, the button text should say "Add to cart"', function () {
+    var _render3 = (0, _utils.render)((0, _jsxRuntime.jsx)(_Item.Item, {})),
+        getByText = _render3.getByText;
+
+    var defaultButtonText = getByText('Add to cart');
+    expect(defaultButtonText).toBeTruthy();
+  });
+  it('should render "Remove from cart" when button is pressed', function _callee() {
+    var _render4, getByText, button;
+
+    return _regenerator.default.async(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _render4 = (0, _utils.render)((0, _jsxRuntime.jsx)(_Item.Item, {})), getByText = _render4.getByText;
+            button = getByText('Add to cart');
+
+            _utils.fireEvent.press(button);
+
+            _context.next = 5;
+            return _regenerator.default.awrap((0, _utils.waitFor)(function () {
+              return expect(getByText('Remove from cart')).toBeTruthy();
+            }));
+
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, null, null, null, Promise);
+  });
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkl0ZW0udGVzdC50c3giXSwibmFtZXMiOlsiZGVzY3JpYmUiLCJpdCIsImdldEJ5VGV4dCIsInRlc3ROYW1lIiwiZXhwZWN0IiwidG9CZVRydXRoeSIsInRlc3RQcmljZSIsImRlZmF1bHRCdXR0b25UZXh0IiwiYnV0dG9uIiwiZmlyZUV2ZW50IiwicHJlc3MiXSwibWFwcGluZ3MiOiI7Ozs7QUFBQTs7QUFDQTs7OztBQUVBQSxRQUFRLENBQUMsd0JBQUQsRUFBMkIsWUFBTTtBQUN2Q0MsRUFBQUEsRUFBRSxDQUFDLHlDQUFELEVBQTRDLFlBQU07QUFDbEQsa0JBQW9CLG1CQUFPLHFCQUFDLFVBQUQ7QUFBTSxNQUFBLElBQUksRUFBQztBQUFYLE1BQVAsQ0FBcEI7QUFBQSxRQUFPQyxTQUFQLFdBQU9BLFNBQVA7O0FBQ0EsUUFBTUMsUUFBUSxHQUFHRCxTQUFTLENBQUMsU0FBRCxDQUExQjtBQUNBRSxJQUFBQSxNQUFNLENBQUNELFFBQUQsQ0FBTixDQUFpQkUsVUFBakI7QUFDRCxHQUpDLENBQUY7QUFNQUosRUFBQUEsRUFBRSxDQUFDLDBDQUFELEVBQTZDLFlBQU07QUFDbkQsbUJBQW9CLG1CQUFPLHFCQUFDLFVBQUQ7QUFBTSxNQUFBLEtBQUssRUFBRTtBQUFiLE1BQVAsQ0FBcEI7QUFBQSxRQUFPQyxTQUFQLFlBQU9BLFNBQVA7O0FBQ0EsUUFBTUksU0FBUyxHQUFHSixTQUFTLENBQUMsT0FBRCxDQUEzQjtBQUNBRSxJQUFBQSxNQUFNLENBQUNFLFNBQUQsQ0FBTixDQUFrQkQsVUFBbEI7QUFDRCxHQUpDLENBQUY7QUFNQUosRUFBQUEsRUFBRSxDQUFDLDJEQUFELEVBQThELFlBQU07QUFDcEUsbUJBQW9CLG1CQUFPLHFCQUFDLFVBQUQsS0FBUCxDQUFwQjtBQUFBLFFBQU9DLFNBQVAsWUFBT0EsU0FBUDs7QUFDQSxRQUFNSyxpQkFBaUIsR0FBR0wsU0FBUyxDQUFDLGFBQUQsQ0FBbkM7QUFDQUUsSUFBQUEsTUFBTSxDQUFDRyxpQkFBRCxDQUFOLENBQTBCRixVQUExQjtBQUNELEdBSkMsQ0FBRjtBQU1BSixFQUFBQSxFQUFFLENBQUMseURBQUQsRUFBNEQ7QUFBQTs7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQUN4QyxtQkFBTyxxQkFBQyxVQUFELEtBQVAsQ0FEd0MsRUFDckRDLFNBRHFELFlBQ3JEQSxTQURxRDtBQUV0RE0sWUFBQUEsTUFGc0QsR0FFN0NOLFNBQVMsQ0FBQyxhQUFELENBRm9DOztBQUc1RE8sNkJBQVVDLEtBQVYsQ0FBZ0JGLE1BQWhCOztBQUg0RDtBQUFBLDhDQUl0RCxvQkFBUTtBQUFBLHFCQUFNSixNQUFNLENBQUNGLFNBQVMsQ0FBQyxrQkFBRCxDQUFWLENBQU4sQ0FBc0NHLFVBQXRDLEVBQU47QUFBQSxhQUFSLENBSnNEOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEdBQTVELENBQUY7QUFNRCxDQXpCTyxDQUFSIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtyZW5kZXIsIGZpcmVFdmVudCwgd2FpdEZvcn0gZnJvbSAnLi4vLi4vdXRpbHMnXG5pbXBvcnQge0l0ZW19IGZyb20gJy4uLy4uLy4uL2NvbXBvbmVudHMvSXRlbSdcblxuZGVzY3JpYmUoJ2NvbXBvbmVudHMgLT4gPEl0ZW0gLz4nLCAoKSA9PiB7XG4gIGl0KCdyZW5kZXIgdGhlIGZvb2QgbmFtZSBpZiBvbmUgaXMgcHJvdmlkZWQnLCAoKSA9PiB7XG4gICAgY29uc3Qge2dldEJ5VGV4dH0gPSByZW5kZXIoPEl0ZW0gbmFtZT1cInRlc3RpbmdcIiAvPilcbiAgICBjb25zdCB0ZXN0TmFtZSA9IGdldEJ5VGV4dCgndGVzdGluZycpXG4gICAgZXhwZWN0KHRlc3ROYW1lKS50b0JlVHJ1dGh5KClcbiAgfSlcblxuICBpdCgncmVuZGVyIHRoZSBmb29kIHByaWNlIGlmIG9uZSBpcyBwcm92aWRlZCcsICgpID0+IHtcbiAgICBjb25zdCB7Z2V0QnlUZXh0fSA9IHJlbmRlcig8SXRlbSBwcmljZT17MTIzNDV9IC8+KVxuICAgIGNvbnN0IHRlc3RQcmljZSA9IGdldEJ5VGV4dCgnMTIzNDUnKVxuICAgIGV4cGVjdCh0ZXN0UHJpY2UpLnRvQmVUcnV0aHkoKVxuICB9KVxuXG4gIGl0KCdvbiBmaXJzdCByZW5kZXIsIHRoZSBidXR0b24gdGV4dCBzaG91bGQgc2F5IFwiQWRkIHRvIGNhcnRcIicsICgpID0+IHtcbiAgICBjb25zdCB7Z2V0QnlUZXh0fSA9IHJlbmRlcig8SXRlbSAvPilcbiAgICBjb25zdCBkZWZhdWx0QnV0dG9uVGV4dCA9IGdldEJ5VGV4dCgnQWRkIHRvIGNhcnQnKVxuICAgIGV4cGVjdChkZWZhdWx0QnV0dG9uVGV4dCkudG9CZVRydXRoeSgpXG4gIH0pXG5cbiAgaXQoJ3Nob3VsZCByZW5kZXIgXCJSZW1vdmUgZnJvbSBjYXJ0XCIgd2hlbiBidXR0b24gaXMgcHJlc3NlZCcsIGFzeW5jICgpID0+IHtcbiAgICBjb25zdCB7Z2V0QnlUZXh0fSA9IHJlbmRlcig8SXRlbSAvPilcbiAgICBjb25zdCBidXR0b24gPSBnZXRCeVRleHQoJ0FkZCB0byBjYXJ0JylcbiAgICBmaXJlRXZlbnQucHJlc3MoYnV0dG9uKVxuICAgIGF3YWl0IHdhaXRGb3IoKCkgPT4gZXhwZWN0KGdldEJ5VGV4dCgnUmVtb3ZlIGZyb20gY2FydCcpKS50b0JlVHJ1dGh5KCkpXG4gIH0pXG59KVxuIl19

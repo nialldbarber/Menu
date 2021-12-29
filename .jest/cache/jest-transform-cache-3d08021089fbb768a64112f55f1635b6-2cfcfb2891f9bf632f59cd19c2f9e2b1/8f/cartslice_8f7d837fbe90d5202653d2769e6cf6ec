@@ -1,0 +1,46 @@
+2ecb64df8f6207c27cd0b81920da9c7b
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.removeItemFromCart = exports.default = exports.cartSlice = exports.cartSelector = exports.addItemToCart = void 0;
+
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
+
+var _toolkit = require("@reduxjs/toolkit");
+
+var initialState = {
+  cart: []
+};
+var cartSlice = (0, _toolkit.createSlice)({
+  name: 'cart',
+  initialState: initialState,
+  reducers: {
+    addItemToCart: function addItemToCart(state, action) {
+      state.cart = [].concat((0, _toConsumableArray2.default)(state.cart), [action.payload]);
+    },
+    removeItemFromCart: function removeItemFromCart(state, action) {
+      state.cart = state.cart.filter(function (item) {
+        return item.id !== action.payload;
+      });
+    },
+    incrementItemCount: function incrementItemCount(state, action) {},
+    decrementItemCount: function decrementItemCount(state, action) {}
+  }
+});
+exports.cartSlice = cartSlice;
+var _cartSlice$actions = cartSlice.actions,
+    addItemToCart = _cartSlice$actions.addItemToCart,
+    removeItemFromCart = _cartSlice$actions.removeItemFromCart;
+exports.removeItemFromCart = removeItemFromCart;
+exports.addItemToCart = addItemToCart;
+
+var cartSelector = function cartSelector(state) {
+  return state.cart;
+};
+
+exports.cartSelector = cartSelector;
+var _default = cartSlice.reducer;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNhcnQuc2xpY2UudHMiXSwibmFtZXMiOlsiaW5pdGlhbFN0YXRlIiwiY2FydCIsImNhcnRTbGljZSIsIm5hbWUiLCJyZWR1Y2VycyIsImFkZEl0ZW1Ub0NhcnQiLCJzdGF0ZSIsImFjdGlvbiIsInBheWxvYWQiLCJyZW1vdmVJdGVtRnJvbUNhcnQiLCJmaWx0ZXIiLCJpdGVtIiwiaWQiLCJpbmNyZW1lbnRJdGVtQ291bnQiLCJkZWNyZW1lbnRJdGVtQ291bnQiLCJhY3Rpb25zIiwiY2FydFNlbGVjdG9yIiwicmVkdWNlciJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQUE7O0FBUUEsSUFBTUEsWUFBdUIsR0FBRztBQUM5QkMsRUFBQUEsSUFBSSxFQUFFO0FBRHdCLENBQWhDO0FBSU8sSUFBTUMsU0FBUyxHQUFHLDBCQUFZO0FBQ25DQyxFQUFBQSxJQUFJLEVBQUUsTUFENkI7QUFFbkNILEVBQUFBLFlBQVksRUFBWkEsWUFGbUM7QUFHbkNJLEVBQUFBLFFBQVEsRUFBRTtBQUNSQyxJQUFBQSxhQUFhLEVBQUUsdUJBQUNDLEtBQUQsRUFBUUMsTUFBUixFQUFtQjtBQUNoQ0QsTUFBQUEsS0FBSyxDQUFDTCxJQUFOLDhDQUFpQkssS0FBSyxDQUFDTCxJQUF2QixJQUE2Qk0sTUFBTSxDQUFDQyxPQUFwQztBQUNELEtBSE87QUFJUkMsSUFBQUEsa0JBQWtCLEVBQUUsNEJBQUNILEtBQUQsRUFBUUMsTUFBUixFQUFtQjtBQUNyQ0QsTUFBQUEsS0FBSyxDQUFDTCxJQUFOLEdBQWFLLEtBQUssQ0FBQ0wsSUFBTixDQUFXUyxNQUFYLENBQWtCLFVBQUNDLElBQUQ7QUFBQSxlQUFVQSxJQUFJLENBQUNDLEVBQUwsS0FBWUwsTUFBTSxDQUFDQyxPQUE3QjtBQUFBLE9BQWxCLENBQWI7QUFDRCxLQU5PO0FBT1JLLElBQUFBLGtCQUFrQixFQUFFLDRCQUFDUCxLQUFELEVBQVFDLE1BQVIsRUFBbUIsQ0FBRSxDQVBqQztBQVFSTyxJQUFBQSxrQkFBa0IsRUFBRSw0QkFBQ1IsS0FBRCxFQUFRQyxNQUFSLEVBQW1CLENBQUU7QUFSakM7QUFIeUIsQ0FBWixDQUFsQjs7QUFlQSx5QkFBNENMLFNBQVMsQ0FBQ2EsT0FBdEQ7QUFBQSxJQUFPVixhQUFQLHNCQUFPQSxhQUFQO0FBQUEsSUFBc0JJLGtCQUF0QixzQkFBc0JBLGtCQUF0Qjs7OztBQUVBLElBQU1PLFlBQVksR0FBRyxTQUFmQSxZQUFlLENBQUNWLEtBQUQ7QUFBQSxTQUFzQkEsS0FBSyxDQUFDTCxJQUE1QjtBQUFBLENBQXJCOzs7ZUFFUUMsU0FBUyxDQUFDZSxPIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtjcmVhdGVTbGljZSwgUGF5bG9hZEFjdGlvbn0gZnJvbSAnQHJlZHV4anMvdG9vbGtpdCdcbmltcG9ydCB0eXBlIHtSb290U3RhdGV9IGZyb20gJy4vaW5kZXgnXG5pbXBvcnQgdHlwZSB7SXRlbX0gZnJvbSAnLi9pdGVtcy5zbGljZSdcblxuZXhwb3J0IGludGVyZmFjZSBDYXJ0U3RhdGUge1xuICBjYXJ0OiBJdGVtW11cbn1cblxuY29uc3QgaW5pdGlhbFN0YXRlOiBDYXJ0U3RhdGUgPSB7XG4gIGNhcnQ6IFtdLFxufVxuXG5leHBvcnQgY29uc3QgY2FydFNsaWNlID0gY3JlYXRlU2xpY2Uoe1xuICBuYW1lOiAnY2FydCcsXG4gIGluaXRpYWxTdGF0ZSxcbiAgcmVkdWNlcnM6IHtcbiAgICBhZGRJdGVtVG9DYXJ0OiAoc3RhdGUsIGFjdGlvbikgPT4ge1xuICAgICAgc3RhdGUuY2FydCA9IFsuLi5zdGF0ZS5jYXJ0LCBhY3Rpb24ucGF5bG9hZF1cbiAgICB9LFxuICAgIHJlbW92ZUl0ZW1Gcm9tQ2FydDogKHN0YXRlLCBhY3Rpb24pID0+IHtcbiAgICAgIHN0YXRlLmNhcnQgPSBzdGF0ZS5jYXJ0LmZpbHRlcigoaXRlbSkgPT4gaXRlbS5pZCAhPT0gYWN0aW9uLnBheWxvYWQpXG4gICAgfSxcbiAgICBpbmNyZW1lbnRJdGVtQ291bnQ6IChzdGF0ZSwgYWN0aW9uKSA9PiB7fSxcbiAgICBkZWNyZW1lbnRJdGVtQ291bnQ6IChzdGF0ZSwgYWN0aW9uKSA9PiB7fSxcbiAgfSxcbn0pXG5cbmV4cG9ydCBjb25zdCB7YWRkSXRlbVRvQ2FydCwgcmVtb3ZlSXRlbUZyb21DYXJ0fSA9IGNhcnRTbGljZS5hY3Rpb25zXG5cbmV4cG9ydCBjb25zdCBjYXJ0U2VsZWN0b3IgPSAoc3RhdGU6IFJvb3RTdGF0ZSkgPT4gc3RhdGUuY2FydFxuXG5leHBvcnQgZGVmYXVsdCBjYXJ0U2xpY2UucmVkdWNlclxuIl19

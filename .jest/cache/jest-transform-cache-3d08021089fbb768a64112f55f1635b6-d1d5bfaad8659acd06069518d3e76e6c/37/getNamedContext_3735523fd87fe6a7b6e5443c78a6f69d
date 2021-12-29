@@ -1,0 +1,78 @@
+66ac042d8b6a48618f8723012cd9f0a4
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = getNamedContext;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _global$contexts;
+
+function _getRequireWildcardCache(nodeInterop) {
+  if (typeof WeakMap !== "function") return null;
+  var cacheBabelInterop = new WeakMap();
+  var cacheNodeInterop = new WeakMap();
+  return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) {
+    return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+  })(nodeInterop);
+}
+
+function _interopRequireWildcard(obj, nodeInterop) {
+  if (!nodeInterop && obj && obj.__esModule) {
+    return obj;
+  }
+
+  if (obj === null || typeof obj !== "object" && typeof obj !== "function") {
+    return {
+      default: obj
+    };
+  }
+
+  var cache = _getRequireWildcardCache(nodeInterop);
+
+  if (cache && cache.has(obj)) {
+    return cache.get(obj);
+  }
+
+  var newObj = {};
+  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+  for (var key in obj) {
+    if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+
+      if (desc && (desc.get || desc.set)) {
+        Object.defineProperty(newObj, key, desc);
+      } else {
+        newObj[key] = obj[key];
+      }
+    }
+  }
+
+  newObj.default = obj;
+
+  if (cache) {
+    cache.set(obj, newObj);
+  }
+
+  return newObj;
+}
+
+var contexts = '__react_navigation__elements_contexts';
+global[contexts] = (_global$contexts = global[contexts]) !== null && _global$contexts !== void 0 ? _global$contexts : new Map();
+
+function getNamedContext(name, initialValue) {
+  var context = global[contexts].get(name);
+
+  if (context) {
+    return context;
+  }
+
+  context = React.createContext(initialValue);
+  context.displayName = name;
+  global[contexts].set(name, context);
+  return context;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImdldE5hbWVkQ29udGV4dC50c3giXSwibmFtZXMiOlsiY29udGV4dHMiLCJnbG9iYWwiLCJjb250ZXh0IiwiUmVhY3QiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQSxJQUFBLEtBQUEsR0FBQSx1QkFBQSxDQUFBLE9BQUEsQ0FBQSxPQUFBLENBQUEsQ0FBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBRUEsSUFBTUEsUUFBUSxHQUFkLHVDQUFBO0FBT0FDLE1BQU0sQ0FBTkEsUUFBTSxDQUFOQSxHQUFBQSxDQUFBQSxnQkFBQUEsR0FBbUJBLE1BQU0sQ0FBekJBLFFBQXlCLENBQXpCQSxNQUFBQSxJQUFBQSxJQUFBQSxnQkFBQUEsS0FBQUEsS0FBQUEsQ0FBQUEsR0FBQUEsZ0JBQUFBLEdBQXVDLElBQXZDQSxHQUF1QyxFQUF2Q0E7O0FBRWUsU0FBQSxlQUFBLENBQUEsSUFBQSxFQUFBLFlBQUEsRUFHSztBQUNsQixNQUFJQyxPQUFPLEdBQUdELE1BQU0sQ0FBTkEsUUFBTSxDQUFOQSxDQUFBQSxHQUFBQSxDQUFkLElBQWNBLENBQWQ7O0FBRUEsTUFBQSxPQUFBLEVBQWE7QUFDWCxXQUFBLE9BQUE7QUFDRDs7QUFFREMsRUFBQUEsT0FBTyxHQUFHQyxLQUFLLENBQUxBLGFBQUFBLENBQVZELFlBQVVDLENBQVZEO0FBQ0FBLEVBQUFBLE9BQU8sQ0FBUEEsV0FBQUEsR0FBQUEsSUFBQUE7QUFFQUQsRUFBQUEsTUFBTSxDQUFOQSxRQUFNLENBQU5BLENBQUFBLEdBQUFBLENBQUFBLElBQUFBLEVBQUFBLE9BQUFBO0FBRUEsU0FBQSxPQUFBO0FBQ0QiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5cbmNvbnN0IGNvbnRleHRzID0gJ19fcmVhY3RfbmF2aWdhdGlvbl9fZWxlbWVudHNfY29udGV4dHMnO1xuXG5kZWNsYXJlIGdsb2JhbCB7XG4gIHZhciBfX3JlYWN0X25hdmlnYXRpb25fX2VsZW1lbnRzX2NvbnRleHRzOiBNYXA8c3RyaW5nLCBSZWFjdC5Db250ZXh0PGFueT4+O1xufVxuXG4vLyBXZSB1c2UgYSBnbG9iYWwgdmFyaWFibGUgdG8ga2VlcCBvdXIgY29udGV4dHMgc28gdGhhdCB3ZSBjYW4gcmV1c2Ugc2FtZSBjb250ZXh0cyBhY3Jvc3MgcGFja2FnZXNcbmdsb2JhbFtjb250ZXh0c10gPSBnbG9iYWxbY29udGV4dHNdID8/IG5ldyBNYXA8c3RyaW5nLCBSZWFjdC5Db250ZXh0PGFueT4+KCk7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIGdldE5hbWVkQ29udGV4dDxUPihcbiAgbmFtZTogc3RyaW5nLFxuICBpbml0aWFsVmFsdWU6IFRcbik6IFJlYWN0LkNvbnRleHQ8VD4ge1xuICBsZXQgY29udGV4dCA9IGdsb2JhbFtjb250ZXh0c10uZ2V0KG5hbWUpO1xuXG4gIGlmIChjb250ZXh0KSB7XG4gICAgcmV0dXJuIGNvbnRleHQ7XG4gIH1cblxuICBjb250ZXh0ID0gUmVhY3QuY3JlYXRlQ29udGV4dDxUPihpbml0aWFsVmFsdWUpO1xuICBjb250ZXh0LmRpc3BsYXlOYW1lID0gbmFtZTtcblxuICBnbG9iYWxbY29udGV4dHNdLnNldChuYW1lLCBjb250ZXh0KTtcblxuICByZXR1cm4gY29udGV4dDtcbn1cbiJdfQ==

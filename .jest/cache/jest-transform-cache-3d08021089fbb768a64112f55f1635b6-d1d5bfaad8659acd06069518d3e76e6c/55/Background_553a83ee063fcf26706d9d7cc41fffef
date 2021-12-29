@@ -1,0 +1,102 @@
+8884a0da5f7cf637d98153d983622e6d
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+
+var _excluded = ["style"];
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Background;
+
+var _native = require("@react-navigation/native");
+
+var React = _interopRequireWildcard(require("react"));
+
+var _reactNative = require("react-native");
+
+function _getRequireWildcardCache(nodeInterop) {
+  if (typeof WeakMap !== "function") return null;
+  var cacheBabelInterop = new WeakMap();
+  var cacheNodeInterop = new WeakMap();
+  return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) {
+    return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+  })(nodeInterop);
+}
+
+function _interopRequireWildcard(obj, nodeInterop) {
+  if (!nodeInterop && obj && obj.__esModule) {
+    return obj;
+  }
+
+  if (obj === null || typeof obj !== "object" && typeof obj !== "function") {
+    return {
+      default: obj
+    };
+  }
+
+  var cache = _getRequireWildcardCache(nodeInterop);
+
+  if (cache && cache.has(obj)) {
+    return cache.get(obj);
+  }
+
+  var newObj = {};
+  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+  for (var key in obj) {
+    if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+
+      if (desc && (desc.get || desc.set)) {
+        Object.defineProperty(newObj, key, desc);
+      } else {
+        newObj[key] = obj[key];
+      }
+    }
+  }
+
+  newObj.default = obj;
+
+  if (cache) {
+    cache.set(obj, newObj);
+  }
+
+  return newObj;
+}
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function Background(_ref) {
+  var style = _ref.style,
+      rest = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+
+  var _ref2 = (0, _native.useTheme)(),
+      colors = _ref2.colors;
+
+  return React.createElement(_reactNative.View, _extends({}, rest, {
+    style: [{
+      flex: 1,
+      backgroundColor: colors.background
+    }, style]
+  }));
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkJhY2tncm91bmQudHN4Il0sIm5hbWVzIjpbInJlc3QiLCJjb2xvcnMiLCJmbGV4IiwiYmFja2dyb3VuZENvbG9yIiwiYmFja2dyb3VuZCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsSUFBQSxPQUFBLEdBQUEsT0FBQSxDQUFBLDBCQUFBLENBQUE7O0FBQ0EsSUFBQSxLQUFBLEdBQUEsdUJBQUEsQ0FBQSxPQUFBLENBQUEsT0FBQSxDQUFBLENBQUE7O0FBQ0EsSUFBQSxZQUFBLEdBQUEsT0FBQSxDQUFBLGNBQUEsQ0FBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQU1lLFNBQUEsVUFBQSxPQUErQztBQUFBLE1BQTNCLEtBQTJCLFFBQTNCLEtBQTJCO0FBQUEsTUFBZkEsSUFBZTs7QUFDNUQsY0FBbUIsQ0FBQSxHQUFBLE9BQUEsQ0FBbkIsUUFBbUIsR0FBbkI7QUFBQSxNQUFRQyxNQUFSLFNBQVFBLE1BQVI7O0FBRUEsU0FDRSxLQUFBLENBQUEsYUFBQSxDQUFDLFlBQUEsQ0FBRCxJQUFBLEVBQUEsUUFBQSxDQUFBLEVBQUEsRUFBQSxJQUFBLEVBQUE7QUFFRSxJQUFBLEtBQUssRUFBRSxDQUFDO0FBQUVDLE1BQUFBLElBQUksRUFBTixDQUFBO0FBQVdDLE1BQUFBLGVBQWUsRUFBRUYsTUFBTSxDQUFDRztBQUFuQyxLQUFELEVBQUEsS0FBQTtBQUZULEdBQUEsQ0FBQSxDQURGO0FBTUQiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VUaGVtZSB9IGZyb20gJ0ByZWFjdC1uYXZpZ2F0aW9uL25hdGl2ZSc7XG5pbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBWaWV3LCBWaWV3UHJvcHMgfSBmcm9tICdyZWFjdC1uYXRpdmUnO1xuXG50eXBlIFByb3BzID0gVmlld1Byb3BzICYge1xuICBjaGlsZHJlbjogUmVhY3QuUmVhY3ROb2RlO1xufTtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQmFja2dyb3VuZCh7IHN0eWxlLCAuLi5yZXN0IH06IFByb3BzKSB7XG4gIGNvbnN0IHsgY29sb3JzIH0gPSB1c2VUaGVtZSgpO1xuXG4gIHJldHVybiAoXG4gICAgPFZpZXdcbiAgICAgIHsuLi5yZXN0fVxuICAgICAgc3R5bGU9e1t7IGZsZXg6IDEsIGJhY2tncm91bmRDb2xvcjogY29sb3JzLmJhY2tncm91bmQgfSwgc3R5bGVdfVxuICAgIC8+XG4gICk7XG59XG4iXX0=

@@ -1,0 +1,20 @@
+922bf72df7eda4fdef11998c3ef95432
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _getNamedContext = _interopRequireDefault(require("../getNamedContext"));
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
+
+var HeaderHeightContext = (0, _getNamedContext.default)('HeaderHeightContext', undefined);
+var _default = HeaderHeightContext;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkhlYWRlckhlaWdodENvbnRleHQudHN4Il0sIm5hbWVzIjpbIkhlYWRlckhlaWdodENvbnRleHQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQSxJQUFBLGdCQUFBLEdBQUEsc0JBQUEsQ0FBQSxPQUFBLHNCQUFBLENBQUE7Ozs7Ozs7O0FBRUEsSUFBTUEsbUJBQW1CLEdBQUcsQ0FBQSxHQUFBLGdCQUFBLENBQUEsT0FBQSxFQUFBLHFCQUFBLEVBQTVCLFNBQTRCLENBQTVCO2VBS2VBLG1CIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGdldE5hbWVkQ29udGV4dCBmcm9tICcuLi9nZXROYW1lZENvbnRleHQnO1xuXG5jb25zdCBIZWFkZXJIZWlnaHRDb250ZXh0ID0gZ2V0TmFtZWRDb250ZXh0PG51bWJlciB8IHVuZGVmaW5lZD4oXG4gICdIZWFkZXJIZWlnaHRDb250ZXh0JyxcbiAgdW5kZWZpbmVkXG4pO1xuXG5leHBvcnQgZGVmYXVsdCBIZWFkZXJIZWlnaHRDb250ZXh0O1xuIl19

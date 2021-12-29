@@ -1,0 +1,20 @@
+25bfbce623cce49014825e429d6f30f3
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = CartScreen;
+
+var _Layout = require("../../components/Layout");
+
+var _Title = require("../../components/Title");
+
+var _jsxRuntime = require("react/jsx-runtime");
+
+function CartScreen() {
+  return (0, _jsxRuntime.jsx)(_Layout.Layout, {
+    children: (0, _jsxRuntime.jsx)(_Title.Title, {
+      text: "Your Cart"
+    })
+  });
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNhcnQudHN4Il0sIm5hbWVzIjpbIkNhcnRTY3JlZW4iXSwibWFwcGluZ3MiOiI7Ozs7O0FBQ0E7O0FBQ0E7Ozs7QUFFZSxTQUFTQSxVQUFULEdBQXNCO0FBQ25DLFNBQ0UscUJBQUMsY0FBRDtBQUFBLGNBQ0UscUJBQUMsWUFBRDtBQUFPLE1BQUEsSUFBSSxFQUFDO0FBQVo7QUFERixJQURGO0FBS0QiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1RleHQsIFZpZXd9IGZyb20gJ3JlYWN0LW5hdGl2ZSdcbmltcG9ydCB7TGF5b3V0fSBmcm9tICcuLi8uLi9jb21wb25lbnRzL0xheW91dCdcbmltcG9ydCB7VGl0bGV9IGZyb20gJy4uLy4uL2NvbXBvbmVudHMvVGl0bGUnXG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIENhcnRTY3JlZW4oKSB7XG4gIHJldHVybiAoXG4gICAgPExheW91dD5cbiAgICAgIDxUaXRsZSB0ZXh0PVwiWW91ciBDYXJ0XCIgLz5cbiAgICA8L0xheW91dD5cbiAgKVxufVxuIl19

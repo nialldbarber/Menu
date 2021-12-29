@@ -1,0 +1,53 @@
+5c653cc7c10f922d5c92ee5429bc06e9
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _exportNames = {
+  render: true
+};
+exports.render = void 0;
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _reactNative = require("@testing-library/react-native");
+
+Object.keys(_reactNative).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  if (key in exports && exports[key] === _reactNative[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _reactNative[key];
+    }
+  });
+});
+
+var _reactRedux = require("react-redux");
+
+var _store = require("../store");
+
+var _jsxRuntime = require("react/jsx-runtime");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+var AllTheProviders = function AllTheProviders(_ref) {
+  var children = _ref.children;
+  return (0, _jsxRuntime.jsx)(_reactRedux.Provider, {
+    store: _store.store,
+    children: children
+  });
+};
+
+var customRender = function customRender(ui, options) {
+  return (0, _reactNative.render)(ui, _objectSpread({
+    wrapper: AllTheProviders
+  }, options));
+};
+
+exports.render = customRender;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInV0aWxzLnRzeCJdLCJuYW1lcyI6WyJBbGxUaGVQcm92aWRlcnMiLCJjaGlsZHJlbiIsInN0b3JlIiwiY3VzdG9tUmVuZGVyIiwidWkiLCJvcHRpb25zIiwid3JhcHBlciJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUE7O0FBV0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTs7QUFWQTs7QUFDQTs7Ozs7Ozs7QUFFQSxJQUFNQSxlQUFlLEdBQUcsU0FBbEJBLGVBQWtCLE9BQXFCO0FBQUEsTUFBbkJDLFFBQW1CLFFBQW5CQSxRQUFtQjtBQUMzQyxTQUFPLHFCQUFDLG9CQUFEO0FBQVUsSUFBQSxLQUFLLEVBQUVDLFlBQWpCO0FBQUEsY0FBeUJEO0FBQXpCLElBQVA7QUFDRCxDQUZEOztBQUlBLElBQU1FLFlBQVksR0FBRyxTQUFmQSxZQUFlLENBQUNDLEVBQUQsRUFBV0MsT0FBWDtBQUFBLFNBQ25CLHlCQUFPRCxFQUFQO0FBQVlFLElBQUFBLE9BQU8sRUFBRU47QUFBckIsS0FBeUNLLE9BQXpDLEVBRG1CO0FBQUEsQ0FBckIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge3JlbmRlcn0gZnJvbSAnQHRlc3RpbmctbGlicmFyeS9yZWFjdC1uYXRpdmUnXG5pbXBvcnQge1Byb3ZpZGVyfSBmcm9tICdyZWFjdC1yZWR1eCdcbmltcG9ydCB7c3RvcmV9IGZyb20gJy4uL3N0b3JlJ1xuXG5jb25zdCBBbGxUaGVQcm92aWRlcnMgPSAoe2NoaWxkcmVufTogYW55KSA9PiB7XG4gIHJldHVybiA8UHJvdmlkZXIgc3RvcmU9e3N0b3JlfT57Y2hpbGRyZW59PC9Qcm92aWRlcj5cbn1cblxuY29uc3QgY3VzdG9tUmVuZGVyID0gKHVpPzogYW55LCBvcHRpb25zPzogYW55KSA9PlxuICByZW5kZXIodWksIHt3cmFwcGVyOiBBbGxUaGVQcm92aWRlcnMsIC4uLm9wdGlvbnN9KVxuXG5leHBvcnQgKiBmcm9tICdAdGVzdGluZy1saWJyYXJ5L3JlYWN0LW5hdGl2ZSdcbmV4cG9ydCB7Y3VzdG9tUmVuZGVyIGFzIHJlbmRlcn1cbiJdfQ==
