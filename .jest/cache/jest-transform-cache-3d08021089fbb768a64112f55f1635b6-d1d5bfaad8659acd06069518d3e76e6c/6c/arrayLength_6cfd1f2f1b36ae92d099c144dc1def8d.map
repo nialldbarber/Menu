@@ -1,1 +1,0 @@
-{"version":3,"sources":["arrayLength.ts"],"names":["arrayLength","cart","length"],"mappings":";;;;;AAAO,SAASA,WAAT,CAAwBC,IAAxB,EAAkD;AACvD,SAAOA,IAAI,CAACC,MAAL,GAAc,CAAd,GAAkBD,IAAI,CAACC,MAAvB,GAAgC,IAAvC;AACD","sourcesContent":["export function arrayLength<T>(cart: T[]): number | null {\n  return cart.length > 0 ? cart.length : null\n}\n"]}
