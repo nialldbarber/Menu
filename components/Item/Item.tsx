@@ -1,14 +1,14 @@
-import {useMemo, useState} from 'react'
+import {useEffect, useState} from 'react'
 import {StyleSheet, Image, Text, View, Pressable} from 'react-native'
-import {useDispatch} from 'react-redux'
-import {Icon} from 'react-native-elements'
+import {useDispatch, useSelector} from 'react-redux'
 import {
   addItemToCart,
+  cartSelector,
   decrementItemCount,
   incrementItemCount,
   removeItemFromCart,
 } from '../../store/cart.slice'
-import {Icons} from '../Icons'
+import {CustomIcons} from '../CustomIcons'
 
 type ItemProps = {
   id?: number
@@ -41,6 +41,7 @@ export default function Item({
   total,
 }: ItemProps) {
   const dispatch = useDispatch()
+  const {cart} = useSelector(cartSelector)
   const [isAddButtonActive, setIsAddButtonActive] = useState(true)
 
   const styles = StyleSheet.create({
@@ -91,13 +92,12 @@ export default function Item({
       textAlign: 'center',
     },
     addButton: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
+      // display: 'flex',
+      // alignItems: 'center',
+      // justifyContent: 'center',
       marginTop: 15,
       backgroundColor: isAddButtonActive ? '#5F00F5' : '#000000',
       width: isAddButtonActive ? 100 : 150,
-      height: 25,
       borderRadius: 30,
     },
     addButtonText: {
@@ -111,10 +111,25 @@ export default function Item({
     name,
     price,
     image,
-    count,
+    count: 0,
     alt,
     total: 0,
   }
+
+  // console.log(cart)
+
+  // if THIS id does not exist in
+  // the cart, then setIsAddButtonActive
+  // to false
+
+  // useEffect(() => {
+  //   // let isCurrentIdInCart = !!cart.find((item) => item.id === id)
+  //   // console.log({isCurrentIdInCart})
+  //   return () => {
+  //     console.log('unmounted')
+  //     setIsAddButtonActive(false)
+  //   }
+  // }, [])
 
   return (
     <View key={image} style={styles.itemContainer}>
@@ -128,12 +143,12 @@ export default function Item({
         {cartItem ? (
           <View>
             <View style={styles.countContainer}>
-              <Icons
+              <CustomIcons
                 type="arrowleft"
                 action={() => dispatch(decrementItemCount(id))}
               />
               <Text style={styles.count}>{count}</Text>
-              <Icons
+              <CustomIcons
                 type="arrowright"
                 action={() => dispatch(incrementItemCount(id))}
               />
@@ -153,9 +168,18 @@ export default function Item({
               }
             }}
           >
-            <Text style={styles.addButtonText}>
-              {isAddButtonActive ? 'Add to' : 'Remove from'} cart
-            </Text>
+            <View
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: 25,
+              }}
+            >
+              <Text style={styles.addButtonText}>
+                {isAddButtonActive ? 'Add to' : 'Remove from'} cart
+              </Text>
+            </View>
           </Pressable>
         )}
       </View>

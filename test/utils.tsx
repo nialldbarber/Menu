@@ -1,5 +1,6 @@
 import {render} from '@testing-library/react-native'
 import {Provider} from 'react-redux'
+import {ThemeProvider} from 'react-native-elements'
 import {store} from '../store'
 
 const AllTheProviders = ({children}: any) => {

@@ -1,11 +1,14 @@
-import {StyleSheet, Image, Text, View} from 'react-native'
-import {useSelector} from 'react-redux'
+import {useEffect} from 'react'
+import {StyleSheet, View} from 'react-native'
+import {useDispatch, useSelector} from 'react-redux'
 import {Item} from '../../components/Item'
 import {Layout} from '../../components/Layout'
 import {Title} from '../../components/Title'
-import {itemsSelector} from '../../store/items.slice'
+import {fetchItems, itemsSelector} from '../../store/items.slice'
 
 export default function ItemsScreen() {
+  const dispatch = useDispatch()
+
   const styles = StyleSheet.create({
     itemListContainer: {
       paddingBottom: 40,
@@ -13,14 +16,20 @@ export default function ItemsScreen() {
     },
   })
 
+  useEffect(() => {
+    dispatch(fetchItems())
+  }, [])
+
   const {items} = useSelector(itemsSelector)
+
+  console.log(items)
 
   return (
     <Layout>
       <>
         <Title text="To Go Menu" />
         <View style={styles.itemListContainer}>
-          {items.map(({id, name, price, image, count, alt}) => (
+          {items?.map(({id, name, price, image, count, alt}) => (
             <Item key={id} {...{id, name, price, image, count, alt}} />
           ))}
         </View>

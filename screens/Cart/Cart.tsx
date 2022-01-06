@@ -1,13 +1,14 @@
-import {StyleSheet, Text, View} from 'react-native'
+import {Pressable, StyleSheet, Text, View} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
 import {StackNavigationProp} from '@react-navigation/stack'
 import {Icon} from 'react-native-elements'
+import {useSelector} from 'react-redux'
 import {Layout} from '../../components/Layout'
 import {Title} from '../../components/Title'
 import {RootStackParamList} from '../../routing/Stack'
-import {useSelector} from 'react-redux'
 import {cartSelector, cartTotalSelector} from '../../store/cart.slice'
 import {Item} from '../../components/Item'
+import {CustomIcons} from '../../components/CustomIcons'
 
 type itemsScreenProp = StackNavigationProp<RootStackParamList, 'Items'>
 
@@ -31,9 +32,10 @@ export default function CartScreen() {
     <Layout>
       <>
         <View style={styles.back}>
-          <Text onPress={() => navigate('Items')}>
-            <Icon name="arrowleft" type="antdesign" />
-          </Text>
+          <Pressable onPress={() => navigate('Items')} testID="back">
+            {/* <Icon name="arrowleft" type="antdesign" color="#000" size={20} /> */}
+            <Text>Back</Text>
+          </Pressable>
         </View>
         <Title text="Your Cart" cartScreen />
         {cart.length <= 0 ? (
@@ -49,7 +51,6 @@ export default function CartScreen() {
                   name,
                   price,
                   image,
-                  count,
                   alt,
                   total,
                 }}

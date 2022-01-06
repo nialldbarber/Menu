@@ -2,12 +2,12 @@ import {useState} from 'react'
 import {StyleSheet, Pressable} from 'react-native'
 import {Icon} from 'react-native-elements'
 
-type IconsProps = {
+type CustomIconsProps = {
   type: string
   action?: () => void
 }
 
-export default function Icons({type, action}: IconsProps) {
+export default function CustomIcons({type, action}: CustomIconsProps) {
   const [active, setActive] = useState(true)
 
   const styles = StyleSheet.create({
